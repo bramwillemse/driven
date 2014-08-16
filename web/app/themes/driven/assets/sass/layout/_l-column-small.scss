@@ -1,0 +1,15 @@
+.l-column-small {
+	@include grid(48,2);
+
+	// MEDIA QUERIES
+	@include breakpoint(medium) {
+		@include grid(12,1);
+	}
+}
+
+.l-container-content .l-column-small,
+.l-container-content .column-small {
+	@include breakpoint(normal) {
+		@include grid(16,1.33333334);
+	}
+}

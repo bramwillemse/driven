@@ -1,0 +1,29 @@
+.l-column {
+	@include grid(48,2);
+
+	// MEDIA QUERIES
+	@include breakpoint(medium) {
+		@include grid(36,0.5);
+	}
+	@include breakpoint(normal) {
+		@include grid(32,0.5);
+	}
+} 
+
+.l-container-content .l-column,
+.l-container-content .l-column {
+	@include breakpoint(normal) {
+		@include grid(32);
+		float: right;
+	}
+}
+
+.l-column-medium {
+	@include breakpoint(normal) {
+		@include grid(36,0,1);
+
+		.entry {
+			@include grid(48,0,17.33333334);
+		}
+	}
+}

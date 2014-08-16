@@ -1,0 +1,10 @@
+.l-column-big {
+	// Media Queries
+	@include breakpoint(medium) {
+		@include grid(48,12);
+		float: right;
+	}
+	@include breakpoint(extralarge) {
+		@include grid(48,12);
+	}
+}

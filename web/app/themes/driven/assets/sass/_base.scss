@@ -1,0 +1,156 @@
+*, 
+*:before,
+*:after { 
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing:    border-box; 
+   box-sizing:         border-box; 
+}
+ 
+html {
+	font-size: 14px;
+}
+body {
+	width: 100%;
+	margin: 0;
+	margin-top: 2em;
+	
+	padding: 0;
+	background: $color-white;
+	font-size: 1rem;
+	font-family: $proxima-nova;
+	line-height: 1.5em;
+	color: $color-black;
+
+	/* Media queries */
+	@include breakpoint(small) {
+		font-size: 1.1rem;
+	}
+
+	@include breakpoint(medium) {
+		font-size: 1.2rem;
+	}
+
+	@include breakpoint(large) {
+		font-size: 1.3rem;
+	}
+}
+
+h1, h2, h3 {
+	margin: 0; 
+	padding: 0; 
+
+	font-weight: 600;
+}
+h1 { 
+	margin-bottom: $layout-margin * 2;
+
+	@include font-size($font-large,1);
+
+	a { 
+		color: $color-second; 
+
+		transition: color 0.15s ease;
+
+		&:hover,
+		&:focus {
+			color: lighten($color-first,12.5%);
+		}
+		&:active {
+			color: darken($color-first, 5%);
+		}
+	}
+}
+h1 a:hover { text-decoration: none;  }
+h2 { 
+	@include font-size($font-medium, 1);
+	margin-top: $layout-margin * 2;
+	margin-bottom: $layout-margin;
+}
+h3 { 
+	@include font-size($font-normal, 1);
+	margin-top: $layout-margin * 2;
+	margin-bottom: $layout-margin;
+}
+
+img, 
+a img { 
+	max-width: 100%;
+	height: auto;
+	
+	border: none; 
+}
+
+p { 
+	margin-top: 0;
+	margin-bottom: $layout-margin;
+}
+small { 
+	font-size: 0.75em; 
+}
+
+strong,
+b { 
+	font-weight: 600 
+}
+em,
+i {
+	font-style: italic;
+}
+
+a { 
+	color: $color-first; 
+	text-decoration: none;
+	&:hover, 
+	&:focus { 
+		color: lighten($color-first,12.5%); 
+		text-decoration: none;
+	}
+	&:active {
+		color: darken($color-first, 12.5%);
+	}
+}
+
+ul, 
+ul li, 
+li { 
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+}	
+
+blockquote { 
+	margin: $layout-margin 0 $layout-margin $layout-margin; 
+	padding-left: $layout-margin; 
+	border-left: 3px solid $color-black; 
+	p {
+		font-family: $georgia;
+		@include font-size($font-normal);
+		font-style: italic; 
+	}
+}
+
+*:focus { outline: none; }
+*::-moz-focus-inner { border: none; }
+::-moz-selection { background: $color-second; color: $color-black; text-shadow: none; }
+::selection { background: $color-second; color: $color-black; text-shadow: none; }
+iframe { max-width: 100%; }
+		
+	/* WordPress classes */
+	.alignleft { float: left; }
+	.alignright { float: right; }
+	img.alignleft { float: left; margin: 0; }
+	img.alignright { float: right; margin: 0; }
+	img.aligncenter { display: block; margin: 0 auto; }
+	
+
+	
+	.home .vvqbox { max-width: 450px !important; }
+
+/* HACKS */
+.tzfix { // fixes margins around background images
+	-webkit-transform: translatez(0);
+	    -moz-transform: translatez(0);
+	    -ms-transform: translatez(0);
+	    -o-transform: translatez(0);
+	    transform: translatez(0);
+}

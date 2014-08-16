@@ -1,0 +1,73 @@
+/*
+ * Responsive (mobile first) table
+ * Cells are displayed stacked on small screens. 
+ * With added labels based on data-label attributes
+ */
+
+.table,
+.table-row,
+.table-column:before{
+	display: block;
+}
+
+.table {
+	max-width: 100%;
+	margin: 0 auto;
+	margin-bottom: $layout-margin;
+}
+
+.table-head {
+	position:absolute;	
+	top:-1000em;
+	left:-1000em;
+}
+
+.table-column { 
+	display: inline-block;
+	padding: 0.5rem;
+
+	vertical-align: middle;
+}
+
+.table-label, 
+.table-column:before { 
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.table-column:before { 
+	content:''attr(data-label)'';	
+}
+
+@include breakpoint(small) {
+	.table {
+		display:table;
+	}
+
+	.table-head {
+		 display: table-header-group; 
+		 position: relative;
+		 top: auto;
+		 left: auto;
+	}
+	.table-row {
+		display:table-row;
+
+		&:hover {
+			background: $color-grey-10;
+		}
+	}
+
+	.table-column {
+		display:table-cell;		
+		border-bottom:1px solid #eeeeee;
+
+		&:before {
+			display: none;
+			content: '';
+		}
+	}
+
+}

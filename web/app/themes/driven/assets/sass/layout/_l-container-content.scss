@@ -1,0 +1,7 @@
+.l-container-content {
+	@include grid(48);
+
+	@include breakpoint(normal) {
+		@include grid (36);
+	}
+}

@@ -1,0 +1,5 @@
+.is-faded,
+.is-faded a {
+	@include transition(background-color 0.15s);
+	@include transition(color 0.15s);
+}

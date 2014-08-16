@@ -1,0 +1,39 @@
+$proxima-nova: "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+// $proxima-nova-soft: "proxima-nova-soft", "Helvetica Neue", Arial, sans-serif;
+$georgia: Georgia, serif;
+$skolar: "skolar", georgia, serif;
+
+// Import official, unedited Symbolset module first, then load into variable
+// @import "theme/ss-social-regular";
+// $ss-social: "SSSocialRegular", "proxima-nova-soft", "Helvetica Neue", Arial, sans-serif;
+
+// Import official, unedited Symbolset module first, then load into variable
+// @import "theme/ss-standard";
+$ss-standard: "SSStandard", "proxima-nova-soft", "Helvetica Neue", Arial, sans-serif;
+
+$font-size: 1.4em;
+
+$font-tiny: 0.8em;
+$font-small: 0.9em;
+$font-normal: 1.4em;
+$font-medium: 1.2em;
+$font-large: 1.6em;
+$font-huge: 2em;
+$font-monster: 3em;
+$font-god: 4em;
+
+body {
+	-webkit-font-smoothing:antialiased; /* Antialiased font for great smoothing */
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility; /* Optimise legibility for some CSS3 kerning */
+}
+
+.wf-loading {
+  visibility: hidden;
+}
+ 
+.wf-active  {
+  visibility: visible;
+}
