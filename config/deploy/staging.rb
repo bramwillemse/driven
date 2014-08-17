@@ -1,6 +1,6 @@
 set :stage, :staging
 set :application, 'drv_dev'
-set :branch, :staging
+set :branch, :master
 
 # Simple Role Syntax
 # ==================
