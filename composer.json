@@ -99,7 +99,8 @@
       "wpackagist/wordpress-seo": "*",
       "norcross/airplane-mode": "*",
       "wpackagist/debug-bar": "*",
-      "wpackagist/debug-bar-console": "*"
+      "wpackagist/debug-bar-console": "*",
+      "roots/wp-stage-switcher": "1.0.1"
   },
   "extra": {
     "installer-paths": {
