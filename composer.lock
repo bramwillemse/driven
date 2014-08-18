@@ -4,8 +4,22 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f285e0481ecae660c976c2f3ec7b2104",
+    "hash": "0cd3179601bf9c0359e4370de508d49b",
     "packages": [
+        {
+            "name": "advanced-custom-fields/acf-pro",
+            "version": "5.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzM5OTN8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA5IDEwOjAwOjEz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.12",
@@ -131,6 +145,20 @@
             "description": "A composer installer for libraries that live in an application webroot.",
             "homepage": "http://fancyguy.github.com/webroot-installer/",
             "time": "2013-03-15 17:51:14"
+        },
+        {
+            "name": "norcross/airplane-mode",
+            "version": "0.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/norcross/airplane-mode/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "vlucas/phpdotenv",

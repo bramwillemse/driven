@@ -52,36 +52,58 @@
           "fancyguy/webroot-installer": "1.1.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/acf-pro",
+        "type": "wordpress-plugin",
+        "version": "5.0.4",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzM5OTN8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA5IDEwOjAwOjEz"
+        },
+        "require" : {
+          "composer/installers": "*"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "norcross/airplane-mode",
+        "type": "wordpress-plugin",
+        "version": "0.0.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/norcross/airplane-mode/archive/master.zip"
+        },
+        "require" : {
+          "composer/installers": "*"
+        }
+      }  
     }
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "3.9.2",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist/debug-bar": "*",
-    "wpackagist/debug-bar-console": "*",
-    "wpackagist/iwp-client": "*",
-    "wpackagist/regenerate-thumbnails": "*",
-    "wpackagist/search-and-replace": "*",
-    "wpackagist/simple-page-ordering": "*",
-    "wpackagist/wordpress-importer": "*",
-    "wpackagist/wordpress-seo": "*"    
+    "wordpress/wordpress": "3.9.2",
+      "advanced-custom-fields/acf-pro": "5.0.4",
+      "wpackagist/iwp-client": "*",
+      "wpackagist/regenerate-thumbnails": "*",
+      "wpackagist/search-and-replace": "*",
+      "wpackagist/simple-page-ordering": "*",
+      "wpackagist/wordpress-importer": "*",
+      "wpackagist/wordpress-seo": "*",
+      "norcross/airplane-mode": "*",
+      "wpackagist/debug-bar": "*",
+      "wpackagist/debug-bar-console": "*"
   },
   "extra": {
     "installer-paths": {
-      "web/app/plugins/{$name}/": [
-        "wpackagist/debug-bar",
-        "wpackagist/debug-bar-console",
-        "wpackagist/iwp-client",
-        "wpackagist/regenerate-thumbnails",
-        "wpackagist/search-and-replace",
-        "wpackagist/simple-page-ordering",
-        "wpackagist/wordpress-importer",
-        "wpackagist/wordpress-seo"
-      ],
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "webroot-dir": "web/wp",
