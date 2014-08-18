@@ -72,10 +72,10 @@ if (!defined('ABSPATH')) {
 }
 
 
+
 $envs = array(
   'development' => 'http://drv.local',
-  'staging'     => 'http://demo.bramwillemse.nl/drv',
-  'production'  => 'http://driven.com'
+  'staging'     => 'http://demo.bramwillemse.nl/drv'
+  //'production'  => 'http://demo.bramwillemse.nl/drv'
 );
 define('ENVIRONMENTS', serialize($envs));
-
