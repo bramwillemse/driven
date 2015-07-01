@@ -41,24 +41,9 @@
     {
       "type": "package",
       "package": {
-        "name": "wordpress/wordpress",
-        "version": "3.9.2",
-        "type": "webroot",
-        "dist": {
-          "type": "zip",
-          "url": "https://wordpress.org/wordpress-3.9.2.zip"
-        },
-        "require" : {
-          "fancyguy/webroot-installer": "1.1.0"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "advanced-custom-fields/acf-pro",
         "type": "wordpress-plugin",
-        "version": "5.0.4",
+        "version": "5.2.7",
         "dist": {
           "type": "zip",
           "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzM5OTN8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA5IDEwOjAwOjEz"
@@ -89,8 +74,8 @@
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
-    "wordpress/wordpress": "3.9.2",
-      "advanced-custom-fields/acf-pro": "5.0.4",
+    "johnpbloch/wordpress": "4.2.2",
+      "advanced-custom-fields/acf-pro": "*",
       "wpackagist/iwp-client": "*",
       "wpackagist/regenerate-thumbnails": "*",
       "wpackagist/search-and-replace": "*",
@@ -104,10 +89,10 @@
   },
   "extra": {
     "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],      
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "webroot-dir": "web/wp",
-    "webroot-package": "wordpress/wordpress"
+    "wordpress-install-dir": "web/wp"
   }
 }
