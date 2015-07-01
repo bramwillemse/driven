@@ -74,8 +74,8 @@ if (!defined('ABSPATH')) {
 
 
 $envs = array(
-  'development' => 'http://drv.local',
-  'staging'     => 'http://demo.bramwillemse.nl/drv'
-  //'production'  => 'http://demo.bramwillemse.nl/drv'
+  'development' => 'http://dev.driven.bramwillemse.nl',
+  'staging'     => 'http://staging.bramwillemse.nl/drv'
+  'production'  => 'http://driven.bramwillemse.nl'
 );
 define('ENVIRONMENTS', serialize($envs));
