@@ -35,4 +35,4 @@ bin
 .vagrant
 
 # Assets
-assets/*
+_assets/*
